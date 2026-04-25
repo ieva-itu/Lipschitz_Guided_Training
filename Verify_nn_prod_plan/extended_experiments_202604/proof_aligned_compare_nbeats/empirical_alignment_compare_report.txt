@@ -1,0 +1,16 @@
+Proof-aligned empirical comparison report
+================================================================================
+top_root: .../Documents/Verify_nn_prod_plan/extended_experiments_202604
+models_dir: .../Documents/Verify_nn_prod_plan/extended_experiments_202604/Lipschitz_Guided_Training/Verify_nn_prod_plan/models_20260123/nbeats_20260123/models
+results_root: .../Verify_nn_prod_plan/extended_experiments_202604/results_nbeats
+eps_q: 0.2
+eps_f_scaled: 1.0
+I_max_scaled: 1.0
+F_max_scaled: 2.0
+num_samples: 50000
+
+vanilla: L_hat=74.51774445025116 max|Δq|=121.525528 mean|Δq|=25.667402 viol=0.995020 plus=0.500560 minus=0.494460
+sn_only: L_hat=0.5000005066393776 max|Δq|=0.542909 mean|Δq|=0.208219 viol=0.478580 plus=0.240160 minus=0.238420
+fgsm_only: L_hat=0.43530487776523097 max|Δq|=0.097279 mean|Δq|=0.014843 viol=0.000000 plus=0.000000 minus=0.000000
+random_only: L_hat=93.62910196661802 max|Δq|=5.897568 mean|Δq|=1.112878 viol=0.566560 plus=0.228940 minus=0.337620
+full: L_hat=0.5010757511058705 max|Δq|=0.158650 mean|Δq|=0.058961 viol=0.000000 plus=0.000000 minus=0.000000
