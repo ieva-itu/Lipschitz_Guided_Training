@@ -1,0 +1,34 @@
+Predicting: |          | 0/? [00:00<?, ?it/s]Predicting:   0%|          | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|          | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0: 100%|██████████| 1/1 [00:00<00:00, 623.41it/s]Predicting DataLoader 0: 100%|██████████| 1/1 [00:00<00:00, 559.61it/s]
+[ok] wrote scaling.json -> models/scaling.json
+Predicting: |          | 0/? [00:00<?, ?it/s]Predicting:   0%|          | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|          | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0: 100%|██████████| 1/1 [00:00<00:00, 850.25it/s]Predicting DataLoader 0: 100%|██████████| 1/1 [00:00<00:00, 749.92it/s]
+[ok] wrote episodes -> models/episodes_seed.pkl
+[train_policy] epoch=0001 loss=1533.7896 base=1533.7896 rob=0.0000 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0010 loss=1513.8719 base=1513.8719 rob=0.0000 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0020 loss=1414.2606 base=1414.2606 rob=0.0000 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0030 loss=1241.3587 base=1241.3587 rob=0.0000 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0040 loss=1041.1338 base=1041.1338 rob=0.0000 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0050 loss=847.3339 base=847.3339 rob=0.0000 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0060 loss=829.5999 base=829.5999 rob=0.0000 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0070 loss=827.8343 base=827.8343 rob=0.0000 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0080 loss=827.2429 base=827.2429 rob=0.0000 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0090 loss=829.6198 base=829.6198 rob=0.0000 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0100 loss=829.7947 base=829.7947 rob=0.0000 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0110 loss=830.4618 base=830.4618 rob=0.0000 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0120 loss=827.8814 base=827.8814 rob=0.0000 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0130 loss=828.6057 base=828.6057 rob=0.0000 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0140 loss=830.4835 base=830.4835 rob=0.0000 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0150 loss=828.4312 base=828.4312 rob=0.0000 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0160 loss=828.2579 base=828.2579 rob=0.0000 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0170 loss=828.5181 base=828.5181 rob=0.0000 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0180 loss=828.5833 base=828.5833 rob=0.0000 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0190 loss=827.0870 base=827.0870 rob=0.0000 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0200 loss=829.0000 base=829.0000 rob=0.0000 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0210 loss=829.5401 base=829.5401 rob=0.0000 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0220 loss=828.6266 base=828.6266 rob=0.0000 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0230 loss=829.5452 base=829.5452 rob=0.0000 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0240 loss=828.4568 base=828.4568 rob=0.0000 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0250 loss=827.9143 base=827.9143 rob=0.0000 (w=50.0, r=1.0, eps=0.1)
+[export_policy_onnx] wrote: models/policy_fgsm_only/policy.onnx
+[export_two_copy_onnx_noslice] wrote: models/policy_fgsm_only/policy_two_copy.onnx
+[lipschitz] wrote: models/policy_fgsm_only/lipschitz.json (L_hat=54.0514)
+[done] trained FGSM-only policy -> models/policy_fgsm_only
