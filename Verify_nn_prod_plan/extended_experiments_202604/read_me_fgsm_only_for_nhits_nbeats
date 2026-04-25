@@ -1,0 +1,153 @@
+train_policy_two_onnx_fgsm_only.py
+
+It is analogous to the existing train_policy_two_onnx_both.py, but it trains only:
+
+no spectral normalization
+robustness loss enabled
+FGSM enabled
+random robustness samples disabled
+
+and writes to:
+
+models/policy_fgsm_only/
+  policy.onnx
+  policy_two_copy.onnx
+  lipschitz.json
+  
+  
+Where to place it?
+
+Put it into each forecast family’s scripts/ directory, for example:
+
+~/Documents/Verify_nn_prod_plan/extended_experiments_202604/Lipschitz_Guided_Training/Verify_nn_prod_plan/models_20260123/nhits_20260123/scripts/
+
+and analogously for nbeats_20260123/scripts/.
+
+How to train FGSM-only
+NHITS
+cd ~/Documents/Verify_nn_prod_plan/extended_experiments_202604/Lipschitz_Guided_Training/Verify_nn_prod_plan/models_20260123/nhits_20260123
+
+python3 scripts/train_policy_two_onnx_fgsm_only.py \
+  --forecast nhits \
+  --forecast-workspace ./models/nhits \
+  --epochs 250 \
+  --output-scale 0.5 \
+  --robust-weight 50.0 \
+  --pert-radius 1.0 \
+  --eps-q 0.1 \
+  --seed 0
+N-BEATS
+cd ~/Documents/Verify_nn_prod_plan/extended_experiments_202604/Lipschitz_Guided_Training/Verify_nn_prod_plan/models_20260123/nbeats_20260123
+
+python3 scripts/train_policy_two_onnx_fgsm_only.py \
+  --forecast nbeats \
+  --forecast-workspace ./models/nbeats \
+  --epochs 250 \
+  --output-scale 0.5 \
+  --robust-weight 50.0 \
+  --pert-radius 1.0 \
+  --eps-q 0.1 \
+  --seed 0
+How to check it with Marabou
+
+Once training finishes, run the same verifier you already use, just pointing it at policy_fgsm_only.
+
+NHITS verifier run
+cd ~/Documents/Verify_nn_prod_plan/extended_experiments_202604/Lipschitz_Guided_Training/Verify_nn_prod_plan/models_20260123
+
+python3 -m nhits_20260123.src.verify_robust_marabou \
+  --models-dir nhits_20260123/models \
+  --model-path nhits_20260123/models/policy_fgsm_only/policy_two_copy.onnx \
+  --eps-q 0.2 \
+  --epsf-scaled 1.0 \
+  --i-max-scaled 1.0 \
+  --f-max-scaled 2.0 \
+  --timeout 300 \
+  --verbose | tee "output_verify_nhits_fgsm_only_$(date +%Y%m%d_%H%M%S).txt"
+N-BEATS verifier run
+cd ~/Documents/Verify_nn_prod_plan/extended_experiments_202604/Lipschitz_Guided_Training/Verify_nn_prod_plan/models_20260123
+
+python3 -m nbeats_20260123.src.verify_robust_marabou \
+  --models-dir nbeats_20260123/models \
+  --model-path nbeats_20260123/models/policy_fgsm_only/policy_two_copy.onnx \
+  --eps-q 0.2 \
+  --epsf-scaled 1.0 \
+  --i-max-scaled 1.0 \
+  --f-max-scaled 2.0 \
+  --timeout 300 \
+  --verbose | tee "output_verify_nbeats_fgsm_only_$(date +%Y%m%d_%H%M%S).txt"
+  
+  
+  
+  
+######################
+######################
+
+For the "FULL method", verify the model in:
+
+```bash
+models/policy_robust/
+  policy.onnx
+  policy_two_copy.onnx
+  lipschitz.json
+```
+
+
+## HOW TO IMPLEMENT NHITS full method UNSAT check:
+
+Run from:
+
+```bash
+cd ~/Documents/Verify_nn_prod_plan/extended_experiments_202604/Lipschitz_Guided_Training/Verify_nn_prod_plan/models_20260123
+```
+
+Then:
+
+```bash
+python3 -m nhits_20260123.src.verify_robust_marabou \
+  --models-dir nhits_20260123/models \
+  --model-path nhits_20260123/models/policy_robust/policy_two_copy.onnx \
+  --eps-q 0.2 \
+  --epsf-scaled 1.0 \
+  --i-max-scaled 1.0 \
+  --f-max-scaled 2.0 \
+  --timeout 300 \
+  --verbose | tee "output_verify_nhits_full_method_$(date +%Y%m%d_%H%M%S).txt"
+```
+
+## N-BEATS full method UNSAT check
+
+```bash
+python3 -m nbeats_20260123.src.verify_robust_marabou \
+  --models-dir nbeats_20260123/models \
+  --model-path nbeats_20260123/models/policy_robust/policy_two_copy.onnx \
+  --eps-q 0.2 \
+  --epsf-scaled 1.0 \
+  --i-max-scaled 1.0 \
+  --f-max-scaled 2.0 \
+  --timeout 300 \
+  --verbose | tee "output_verify_nbeats_full_method_$(date +%Y%m%d_%H%M%S).txt"
+```
+
+## Expected result: UNSAT (meaning Marabou found no counterexamples).
+
+
+
+Before running, confirm files exist:
+
+```bash
+ls -lh nhits_20260123/models/policy_robust/
+ls -lh nbeats_20260123/models/policy_robust/
+```
+
+You should see:
+
+```text
+policy.onnx
+policy_two_copy.onnx
+lipschitz.json
+```
+
+
+
+
