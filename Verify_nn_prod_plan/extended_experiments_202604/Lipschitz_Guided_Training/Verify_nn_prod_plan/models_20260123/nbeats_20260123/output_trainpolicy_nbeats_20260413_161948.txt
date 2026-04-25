@@ -1,0 +1,63 @@
+Predicting: |          | 0/? [00:00<?, ?it/s]Predicting:   0%|          | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|          | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0: 100%|██████████| 1/1 [00:00<00:00, 323.01it/s]Predicting DataLoader 0: 100%|██████████| 1/1 [00:00<00:00, 296.71it/s]
+[ok] wrote scaling.json -> models/scaling.json
+Predicting: |          | 0/? [00:00<?, ?it/s]Predicting:   0%|          | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|          | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0: 100%|██████████| 1/1 [00:00<00:00, 409.88it/s]Predicting DataLoader 0: 100%|██████████| 1/1 [00:00<00:00, 364.72it/s]
+[ok] wrote episodes -> models/episodes_seed.pkl
+[train_policy] epoch=0001 loss=1533.7994 base=1533.7994 rob=0.0000 (w=0.0, r=1.0, eps=0.1)
+[train_policy] epoch=0010 loss=1513.8757 base=1513.8757 rob=0.0000 (w=0.0, r=1.0, eps=0.1)
+[train_policy] epoch=0020 loss=1416.0684 base=1416.0684 rob=0.0000 (w=0.0, r=1.0, eps=0.1)
+[train_policy] epoch=0030 loss=1246.0809 base=1246.0809 rob=0.0000 (w=0.0, r=1.0, eps=0.1)
+[train_policy] epoch=0040 loss=1049.0568 base=1049.0568 rob=0.0000 (w=0.0, r=1.0, eps=0.1)
+[train_policy] epoch=0050 loss=855.1415 base=855.1415 rob=0.0000 (w=0.0, r=1.0, eps=0.1)
+[train_policy] epoch=0060 loss=829.5999 base=829.5999 rob=0.0000 (w=0.0, r=1.0, eps=0.1)
+[train_policy] epoch=0070 loss=827.8343 base=827.8343 rob=0.0000 (w=0.0, r=1.0, eps=0.1)
+[train_policy] epoch=0080 loss=827.2429 base=827.2429 rob=0.0000 (w=0.0, r=1.0, eps=0.1)
+[train_policy] epoch=0090 loss=829.6198 base=829.6198 rob=0.0000 (w=0.0, r=1.0, eps=0.1)
+[train_policy] epoch=0100 loss=829.7947 base=829.7947 rob=0.0000 (w=0.0, r=1.0, eps=0.1)
+[train_policy] epoch=0110 loss=830.4618 base=830.4618 rob=0.0000 (w=0.0, r=1.0, eps=0.1)
+[train_policy] epoch=0120 loss=827.8814 base=827.8814 rob=0.0000 (w=0.0, r=1.0, eps=0.1)
+[train_policy] epoch=0130 loss=828.6057 base=828.6057 rob=0.0000 (w=0.0, r=1.0, eps=0.1)
+[train_policy] epoch=0140 loss=830.4835 base=830.4835 rob=0.0000 (w=0.0, r=1.0, eps=0.1)
+[train_policy] epoch=0150 loss=828.4312 base=828.4312 rob=0.0000 (w=0.0, r=1.0, eps=0.1)
+[train_policy] epoch=0160 loss=828.2579 base=828.2579 rob=0.0000 (w=0.0, r=1.0, eps=0.1)
+[train_policy] epoch=0170 loss=828.5181 base=828.5181 rob=0.0000 (w=0.0, r=1.0, eps=0.1)
+[train_policy] epoch=0180 loss=828.5833 base=828.5833 rob=0.0000 (w=0.0, r=1.0, eps=0.1)
+[train_policy] epoch=0190 loss=827.0870 base=827.0870 rob=0.0000 (w=0.0, r=1.0, eps=0.1)
+[train_policy] epoch=0200 loss=829.0000 base=829.0000 rob=0.0000 (w=0.0, r=1.0, eps=0.1)
+[train_policy] epoch=0210 loss=829.5401 base=829.5401 rob=0.0000 (w=0.0, r=1.0, eps=0.1)
+[train_policy] epoch=0220 loss=828.6266 base=828.6266 rob=0.0000 (w=0.0, r=1.0, eps=0.1)
+[train_policy] epoch=0230 loss=829.5452 base=829.5452 rob=0.0000 (w=0.0, r=1.0, eps=0.1)
+[train_policy] epoch=0240 loss=828.4568 base=828.4568 rob=0.0000 (w=0.0, r=1.0, eps=0.1)
+[train_policy] epoch=0250 loss=827.9143 base=827.9143 rob=0.0000 (w=0.0, r=1.0, eps=0.1)
+[export_policy_onnx] wrote: models/policy_baseline/policy.onnx
+[export_two_copy_onnx_noslice] wrote: models/policy_baseline/policy_two_copy.onnx
+[lipschitz] wrote: models/policy_baseline/lipschitz.json (L_hat=74.5177)
+[train_policy] epoch=0001 loss=1534.1373 base=1534.1372 rob=0.0000 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0010 loss=1521.7422 base=1521.6091 rob=0.0027 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0020 loss=1514.8846 base=1514.8174 rob=0.0013 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0030 loss=1509.3455 base=1509.2807 rob=0.0013 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0040 loss=1503.2651 base=1503.1844 rob=0.0016 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0050 loss=1497.2245 base=1497.1347 rob=0.0018 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0060 loss=1491.9171 base=1491.8311 rob=0.0017 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0070 loss=1489.6570 base=1489.5554 rob=0.0020 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0080 loss=1480.3118 base=1480.2318 rob=0.0016 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0090 loss=1476.5657 base=1476.4600 rob=0.0021 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0100 loss=1471.5003 base=1471.4002 rob=0.0020 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0110 loss=1465.4024 base=1465.3152 rob=0.0017 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0120 loss=1461.9528 base=1461.8695 rob=0.0017 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0130 loss=1455.9915 base=1455.9086 rob=0.0017 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0140 loss=1451.8466 base=1451.7813 rob=0.0013 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0150 loss=1445.9059 base=1445.8265 rob=0.0016 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0160 loss=1442.2046 base=1442.1466 rob=0.0012 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0170 loss=1435.4764 base=1435.4079 rob=0.0014 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0180 loss=1430.6284 base=1430.5529 rob=0.0015 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0190 loss=1425.2739 base=1425.2135 rob=0.0012 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0200 loss=1422.4957 base=1422.4326 rob=0.0013 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0210 loss=1417.5925 base=1417.5137 rob=0.0016 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0220 loss=1409.9789 base=1409.9077 rob=0.0014 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0230 loss=1407.3907 base=1407.3354 rob=0.0011 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0240 loss=1401.0743 base=1401.0170 rob=0.0011 (w=50.0, r=1.0, eps=0.1)
+[train_policy] epoch=0250 loss=1396.7009 base=1396.6501 rob=0.0010 (w=50.0, r=1.0, eps=0.1)
+[export_policy_onnx] wrote: models/policy_robust/policy.onnx
+[export_two_copy_onnx_noslice] wrote: models/policy_robust/policy_two_copy.onnx
+[lipschitz] wrote: models/policy_robust/lipschitz.json (L_hat=0.500876)
+[done] trained baseline + robust policies.
