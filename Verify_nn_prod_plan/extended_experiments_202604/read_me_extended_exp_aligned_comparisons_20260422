@@ -1,0 +1,36 @@
+Assuming the training was previously done.
+
+
+cd Documents/Verify_nn_prod_plan/extended_experiments_202604
+
+python3 proof_aligned_empirical_compare.py \
+  --models-dir nhits_20260123/models \
+  --results-root ~/Documents/Verify_nn_prod_plan/extended_experiments_202604/results_nhits \
+  --eps-q 0.2 \
+  --epsf-scaled 1.0 \
+  --i-max-scaled 1.0 \
+  --f-max-scaled 2.0 \
+  --num-samples 50000 \
+  --seed 0 \
+  --methods vanilla sn_only fgsm_only random_only full \
+  --outdir proof_aligned_compare_nhits \
+  --save-per-method-samples
+  
+  
+python3 proof_aligned_empirical_compare.py \
+  --models-dir nbeats_20260123/models \
+  --results-root ~/Documents/Verify_nn_prod_plan/extended_experiments_202604/results_nbeats \
+  --eps-q 0.2 \
+  --epsf-scaled 1.0 \
+  --i-max-scaled 1.0 \
+  --f-max-scaled 2.0 \
+  --num-samples 50000 \
+  --seed 0 \
+  --methods vanilla sn_only fgsm_only random_only full \
+  --outdir proof_aligned_compare_nbeats \
+  --save-per-method-samples
+  
+  
+(If we also want per-sample CSVs:
+
+  --save-per-method-samples)
